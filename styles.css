@@ -110,12 +110,14 @@ ul {
 
 .quote .container {
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.quote h4 {
-
+.quote .quote-person {
+    margin-left: 350px;
 }
 
 
