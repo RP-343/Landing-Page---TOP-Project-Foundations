@@ -7,4 +7,7 @@ Differences between the goal and this page may also arise if I decide to take cr
 
 Any royalty-free images used in the creation of this page will be credited according to the author's wishes or Creative Commons license here:
 
+SVGs from Scale by Flexiple
 
+Black and White circle logo by OpenClipart as part of the
+Public Domain
