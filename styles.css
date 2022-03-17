@@ -7,7 +7,6 @@
 body {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
-    line-height: ;
     color: #1f2937;
     background: white;
     display: flex;
@@ -35,7 +34,7 @@ ul {
 }
 
 .navbar .logo {
-    font-size: x-large;
+    font-size: 32px;
     font-weight: bold;
 
 }
@@ -62,50 +61,113 @@ ul {
     margin-left: 20px;
 }
 
+.navbar .logo:hover,
+.navbar a:hover {
+    color: #87bcde;
+}
 
 
 .header {
     background: #2d4654;
+    min-height: 450px;
 }
 
 .header h1 {
     font-size: 48px;
     font-weight: bolder;
     color: #f9faf8;
+    margin-bottom: 14px;
 }
 
 .header p {
     color: #e5e7eb;
+    margin-bottom: 14px;
+    line-height: 1.5;
 }
+
 .header img {
     max-width: 400px;
-}
+    margin-top: 12px;
+    }
 
 .header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px;
+}
+
+.header button {
+    background-color: #87bcde;
+    color: #f9faf8;
+    padding: 3px 24px;
+    border: 2px solid #87bcde ;
+    border-radius: 6px;
+    font-weight: bold;
+}
+/*Hover not yet learned through TOP as of initial design */
+.header button:hover {
+    background-color: #aecbdd;
 }
 
 
 
+.illustrations {
+    min-height: 350px;
+    flex: 1;
+}
+.illustrations h2 {
+    text-align: center;
+    margin: 25px;
+}
+
 .illustrations img {
     max-width: 200px;
+    border: 3px solid #87bcde;
+    border-radius: 8px;
+    background-color: #d2dee6;
+    box-shadow: 0 3px 5px #4f4f4f;
 }
 
 .illustrations .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .box {
     flex: 1;
     text-align: center;
+    margin-top: 0;
+    margin-left: 12px;
+    margin-bottom: 64px;
+    
+}
+
+.box:hover {
+   transform: scale(1.2);
+}
+
+/* The 4th box is aligning diffrently than the rest,
+I assume it is becasue of the two line subtext as 
+opposed to the other's one lines. Until I learn the correct
+way to fix this, I'll target it specifically to re-add a
+correct margin. This form of selecting has NOT been
+taught as part of TOP yet */
+.box:nth-of-type(4) {
+    margin-top: 21px;
+}
+
+.box p {
+    margin-top: 8px;
 }
 
 
 
 .quote {
-    background: #e5e7eb;
+    background: #d2dee6;
+    min-height: 125px;
+    flex: 1;
 }
 
 .quote .container {
@@ -116,35 +178,109 @@ ul {
     flex-wrap: wrap;
 }
 
-.quote .quote-person {
-    margin-left: 350px;
+.quote-text {
+    font-style: italic;
+    font-size: 36px;
+    font-weight: lighter;
+}
+.quote-person {
+    margin-right: 0px;
+    margin-top: 14px;
+    align-self: flex-end;
 }
 
 
 
-.banner {
-
+.banner-main {
+    min-height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner .banner-container {
     display: flex;
     justify-content: center;
-
+    align-items: center;
+    min-height: 125px;
+    min-width: 600px;
 }
 
 .banner-box {
-    background-color: gray;
+    background-color: #87bcde;
     display: flex;
-    
+    padding: 20px;
+    justify-content: space-between;
+    min-width: 600px;
+    margin: 60px;
 }
+
+.banner-text {
+    font-size: 13px;
+
+
+}
+
+.banner-box button {
+    margin-left: 12px;
+    background-color: #87bcde;
+    color: #f9faf8;
+    border: 2px solid #f9faf8;
+    border-radius: 6px;
+    padding: 0 36px;
+}
+
+.banner-box button:hover {
+    background-color: #aecbdd;
+}
+
+
 
 .footer {
     margin-top: auto;
     background-color: #2d4654;
     color: #e5e7eb;
+    min-height: 75px;
 }
 
 .footer .container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 75px;
+    font-size: 12px;
+}
+
+/* Method to make page mobile friendly by Traversy Media,
+not yet taught in TOP */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header img {
+        max-width: 200px;
+    }
+    .illustrations .container {
+        display: block;
+    }
+
+    .quote .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-main,
+    .banner .banner-container
+    .banner-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-box button {
+        margin-top: 10px;
+        padding: 4px 16px;
+        max-width: 128px;
+        align-self: center;
+    }
 }
