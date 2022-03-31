@@ -254,6 +254,18 @@ taught as part of TOP yet */
 /* Method to make page mobile friendly by Traversy Media,
 not yet taught in TOP */
 @media (max-width: 768px) {
+    html,body {
+        overflow-x: hidden;
+    }
+    
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar ul li {
+        text-align: center;
+    }
+
     .header .container {
         flex-direction: column;
         text-align: center;
@@ -268,6 +280,10 @@ not yet taught in TOP */
     .quote .container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .banner .banner-container {
+        background-color: #87bcde;
     }
 
     .banner-main,
